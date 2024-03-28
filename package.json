@@ -21,6 +21,7 @@
     "build": "webpack --config webpack.prod.js"
   },
   "dependencies": {
+    "@github/jtml": "^0.5.1",
     "jtml": "^0.0.1-development"
   }
 }
