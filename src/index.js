@@ -6,5 +6,6 @@ const data = await weather.getCurrent('Bucharest');
 console.log(data);
 
 dom.display(data);
+dom.addEvents();
 
 // weather.search('Buch');
