@@ -1,0 +1,9 @@
+p {
+    margin: 0;
+}
+
+input {
+    appearance: none;
+    border: none;
+    outline: none;
+}
