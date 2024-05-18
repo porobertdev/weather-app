@@ -18,14 +18,14 @@ export default function display(data) {
                             <p class="location__name">
                                 ${data.location.city}, ${data.location.country}
                             </p>
-                            <p class="location__temp">${data.temp}° C</p>
+                            <p class="location__temp">${data.temp}&deg; C</p>
                         </div>
                     </div>
 
                     <div class="weather__info_details">
                         <p class="real-feel">
                             <span class="bold">Real Feel</span>:
-                            ${data.feelslike}°
+                            ${data.feelslike}&deg;
                         </p>
                         <p class="air-quality">
                             <span class="bold">Air Quality</span>:

@@ -1,7 +1,7 @@
 {
-    "name": "to-do-list",
+    "name": "weather-app",
     "version": "1.0.0",
-    "description": "Assignment from The Odin Project: https://www.theodinproject.com/lessons/node-path-javascript-todo-list",
+    "description": "Assignment from The Odin Project: https://www.theodinproject.com/lessons/node-path-javascript-weather-app",
     "devDependencies": {
         "@babel/core": "^7.24.4",
         "@babel/preset-env": "^7.24.4",
