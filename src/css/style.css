@@ -60,11 +60,8 @@ body {
         }
 
         .weather__info_details {
-            /* display: flex;
-            flex-direction: column;
-            align-items: center; */
             margin: 0 auto;
-            
+
             font-weight: var(--fw-details-values);
 
             span.bold {
