@@ -19,7 +19,7 @@ export default function parseData(data) {
         wind_deg: current.wind_degree,
         icon: {
             text: current.condition.text,
-            url: current.condition.icon.split('//')[1],
+            url: `https://${current.condition.icon.split('//')[1]}`,
         },
     };
 }
