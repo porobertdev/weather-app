@@ -9,6 +9,7 @@ export default function display(data) {
                     type="text"
                     id="search"
                     placeholder="Type a city"
+                    autofocus
                 />
 
                 ${data.error
