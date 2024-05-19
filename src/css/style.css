@@ -111,6 +111,13 @@ body {
                     background-color: var(--clr-red);
                 }
             }
+
+            .wind {
+                img {
+                    width: 0.7rem;
+                    height: 0.7rem;
+                }
+            }
         }
     }
 

@@ -1,6 +1,8 @@
 import { html, render } from '@github/jtml';
 
 export default function display(data) {
+    console.log('🚀 ~ display ~ data:', data);
+
     render(
         html`
             <div class="weather">
@@ -40,11 +42,20 @@ export default function display(data) {
                               </p>
                               <p class="air-quality">
                                   <span class="bold">Air Quality</span>:
-                                  ${data.air_quality.name} <span class="air-quality__circle ${data.air_quality.color}"></span>
+                                  ${data.air_quality.name}
+                                  <span
+                                      class="air-quality__circle ${data
+                                          .air_quality.color}"
+                                  ></span>
                               </p>
                               <p class="wind">
                                   <span class="bold">Wind</span>:
-                                  ${data.wind_speed} km/h
+                                  ${data.wind_speed} km/h ${data.wind_direction}
+                                  <img
+                                      class="wind__direction"
+                                      src="../assets/arrow.svg"
+                                      style="transform: rotate(${data.wind_deg}deg)"
+                                  />
                               </p>
                               <p class="humidity">
                                   <span class="bold">Humidity</span>:
