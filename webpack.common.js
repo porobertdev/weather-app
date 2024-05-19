@@ -39,7 +39,7 @@ module.exports = {
     plugins: [
         new htmlWebpackPlugin({
             template: './src/index.html',
-            title: 'To-Do-List',
+            title: 'WeatherApp',
             inject: 'head',
             scriptLoading: 'defer',
         }),
