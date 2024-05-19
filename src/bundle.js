@@ -10,7 +10,7 @@
                     />
                     <img
                         class="weather__gps"
-                        src="../assets/location.svg"
+                        src="./assets/location.svg"
                         alt=""
                     />
                 </div>
@@ -51,7 +51,7 @@
                                   ${e.wind_speed} km/h ${e.wind_direction}
                                   <img
                                       class="wind__direction"
-                                      src="../assets/arrow.svg"
+                                      src="./assets/arrow.svg"
                                       style="transform: rotate(${e.wind_deg}deg)"
                                   />
                               </p>
