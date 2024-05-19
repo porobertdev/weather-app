@@ -3,13 +3,13 @@ import display from './display';
 
 async function inputHandler(event) {
     if (event.key == 'Enter') {
-        console.log('enter pressed');
+        if (event.target.value != '') {
+            const data = await getCurrent(event.target.value);
+            display(data);
 
-        const data = await getCurrent(event.target.value);
-        display(data);
-
-        // clear once the search is done
-        event.target.value = '';
+            // clear once the search is done
+            event.target.value = '';
+        }
     }
 }
 
