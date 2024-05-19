@@ -4,8 +4,8 @@ import toggleVisibility from './toggleVisibility';
 
 async function inputHandler(event) {
     if (event.key == 'Enter') {
-        toggleVisibility('.weather__loader');
         if (event.target.value != '') {
+            toggleVisibility('.weather__loader');
             const data = await getCurrent(event.target.value);
             toggleVisibility('.weather__loader');
             display(data);
