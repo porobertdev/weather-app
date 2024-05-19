@@ -85,6 +85,7 @@ body {
     .weather__info {
         display: flex;
         flex-direction: column;
+        gap: 2rem;
 
         .weather__info_main {
             display: flex;
@@ -172,5 +173,66 @@ body {
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+    :root {
+        /* font-sizes */
+        --fs-location: 1.7rem;
+        --fs-temp: 4rem;
+        --fs-input: 1.1rem;
+        --fs-details: 1.2rem;
+        /* --fs-error: 2.5rem; */
+
+        /* font-weights */
+        --fw-details-values: 300;
+        --fw-details: 500;
+        --fw-error: 700;
+    }
+
+    body {
+        /* background-color: red; */
+    }
+
+    .weather {
+        width: 90%;
+        margin-top: 5rem;
+
+        .weather__search {
+            .weather__input {
+                padding: 1.5rem;
+                font-size: var(--fs-input);
+            }
+
+            .weather__gps,
+            .weather__loader {
+                top: 20%;
+            }
+
+            .weather__loader {
+                right: 13%;
+            }
+        }
+
+        .weather__info {
+            margin-top: 2rem;
+            gap: 5rem;
+
+            .weather__info_details {
+                font-size: var(--fs-details);
+
+                .air-quality__circle {
+                    width: 1rem;
+                    height: 1rem;
+                }
+
+                .wind img {
+                    width: 1.2rem;
+                    height: 1.2rem;
+                }
+            }
+        }
     }
 }
