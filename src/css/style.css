@@ -71,6 +71,7 @@ body {
 
         &:hover {
             filter: var(--clr-svg-hover);
+            cursor: pointer;
         }
     }
 
@@ -191,8 +192,6 @@ footer {
         padding: 0.2rem;
         border-radius: 10px;
     }
-
- 
 }
 
 .hidden {
