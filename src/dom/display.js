@@ -6,13 +6,20 @@ export default function display(data) {
     render(
         html`
             <div class="weather">
-                <input
-                    class="weather__input"
-                    type="text"
-                    id="search"
-                    placeholder="Type a city, country or coordinates"
-                    autofocus
-                />
+                <div class="weather__search">
+                    <input
+                        class="weather__input"
+                        type="text"
+                        id="search"
+                        placeholder="Type a city, country or coordinates"
+                        autofocus
+                    />
+                    <img
+                        class="weather__gps"
+                        src="../assets/location.svg"
+                        alt=""
+                    />
+                </div>
 
                 ${data.error
                     ? html`

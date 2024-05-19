@@ -13,7 +13,24 @@ async function inputHandler(event) {
     }
 }
 
+function gpsHandler(event) {
+    navigator.geolocation.getCurrentPosition(
+        async (position) => {
+            const data = await getCurrent(
+                `${position.coords.latitude},${position.coords.longitude}`
+            );
+            display(data);
+        },
+        (error) => {
+            alert(error.message);
+        }
+    );
+}
+
 export default function addEvents() {
     const input = document.querySelector('.weather__input');
     input.addEventListener('keydown', inputHandler);
+
+    const gps = document.querySelector('.weather__gps');
+    gps.addEventListener('click', gpsHandler);
 }

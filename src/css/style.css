@@ -7,6 +7,8 @@
     --clr-input: #d9d9d9;
     --clr-text: white;
     --clr-error: #fde74c;
+    --clr-svg-hover: invert(51%) sepia(78%) saturate(2081%) hue-rotate(158deg)
+        brightness(90%) contrast(101%);
 
     /* air quality */
     --clr-green: rgb(65, 192, 65);
@@ -39,14 +41,29 @@ body {
 .weather {
     width: 30%;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
 
-    .weather__input {
-        background-color: var(--clr-input);
-        padding: 1rem;
-        border-radius: 12px;
-        margin-bottom: 2.5rem;
+    .weather__search {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .weather__input {
+            background-color: var(--clr-input);
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    .weather__gps {
+        width: 1.5rem;
+        position: absolute;
+        right: 4%;
+        top: 15%;
+
+        &:hover {
+            filter: var(--clr-svg-hover);
+        }
     }
 
     .weather__info {
