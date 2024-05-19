@@ -10,7 +10,7 @@ export default function display(data) {
                     class="weather__input"
                     type="text"
                     id="search"
-                    placeholder="Type a city"
+                    placeholder="Type a city, country or coordinates"
                     autofocus
                 />
 
