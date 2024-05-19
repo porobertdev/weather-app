@@ -2,11 +2,11 @@
 const quality = {
     1: {
         name: 'Good',
-        color: 'green',
+        color: 'light-green',
     },
     2: {
         name: 'Moderate',
-        color: 'light-green',
+        color: 'green',
     },
     3: {
         name: 'Unhealthy for sensitive group',

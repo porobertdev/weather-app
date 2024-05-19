@@ -40,7 +40,7 @@ export default function display(data) {
                               </p>
                               <p class="air-quality">
                                   <span class="bold">Air Quality</span>:
-                                  ${data.air_quality.name}
+                                  ${data.air_quality.name} <span class="air-quality__circle ${data.air_quality.color}"></span>
                               </p>
                               <p class="wind">
                                   <span class="bold">Wind</span>:

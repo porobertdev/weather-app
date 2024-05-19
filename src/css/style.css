@@ -3,10 +3,18 @@
 
 :root {
     /* colors */
-    --clr-bkg: #2c9ea5;
+    --clr-bkg: #508284;
     --clr-input: #d9d9d9;
     --clr-text: white;
-    --clr-error: #FDE74C;
+    --clr-error: #fde74c;
+
+    /* air quality */
+    --clr-green: rgb(65, 192, 65);
+    --clr-light-green: rgb(117, 237, 117);
+    --clr-yellow: yellow;
+    --clr-light-yellow: rgba(199, 199, 22, 0.675);
+    --clr-orange: orange;
+    --clr-red: rgb(235, 50, 50);
 
     /* font-family */
     --ff-main: 'Inter', sans-serif;
@@ -75,6 +83,33 @@ body {
             p {
                 width: max-content;
                 margin: 0.5rem;
+            }
+
+            .air-quality__circle {
+                display: inline-block;
+                width: 0.7rem;
+                height: 0.7rem;
+                border-radius: 100%;
+
+                &.green {
+                    color: red;
+                    background-color: var(--clr-green);
+                }
+                &.light-green {
+                    background-color: var(--clr-light-green);
+                }
+                &.yellow {
+                    background-color: var(--clr-yellow);
+                }
+                &.light-yellow {
+                    background-color: var(--clr-light-yellow);
+                }
+                &.orange {
+                    background-color: var(--clr-orange);
+                }
+                &.red {
+                    background-color: var(--clr-red);
+                }
             }
         }
     }
