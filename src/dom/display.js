@@ -19,6 +19,7 @@ export default function display(data) {
                         src="./assets/location.svg"
                         alt=""
                     />
+                    <span class="weather__loader hidden"></span>
                 </div>
 
                 ${data.error

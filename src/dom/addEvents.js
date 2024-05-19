@@ -1,10 +1,13 @@
 import getCurrent from '../api/getCurrent';
 import display from './display';
+import toggleVisibility from './toggleVisibility';
 
 async function inputHandler(event) {
     if (event.key == 'Enter') {
+        toggleVisibility('.weather__loader');
         if (event.target.value != '') {
             const data = await getCurrent(event.target.value);
+            toggleVisibility('.weather__loader');
             display(data);
 
             // clear once the search is done
@@ -14,11 +17,14 @@ async function inputHandler(event) {
 }
 
 function gpsHandler(event) {
+    toggleVisibility('.weather__loader');
+
     navigator.geolocation.getCurrentPosition(
         async (position) => {
             const data = await getCurrent(
                 `${position.coords.latitude},${position.coords.longitude}`
             );
+            toggleVisibility('.weather__loader');
             display(data);
         },
         (error) => {
