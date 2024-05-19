@@ -1,5 +1,16 @@
 import { html, render } from '@github/jtml';
 
+const footer = () => html`
+    <footer>
+        <p>
+            Coded with ❤️ and ☕️ by Robert aka
+            <a href="https://beacons.ai/porobertdev" target="__blank"
+                >@porobertdev</a
+            >.
+        </p>
+    </footer>
+`;
+
 export default function display(data) {
     console.log('🚀 ~ display ~ data:', data);
 
@@ -72,6 +83,9 @@ export default function display(data) {
                           </div>
                       </div>`}
             </div>
+
+            <!-- FOOTER -->
+            ${footer()}
         `,
         document.body
     );

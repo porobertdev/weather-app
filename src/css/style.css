@@ -9,6 +9,7 @@
     --clr-error: #fde74c;
     --clr-svg-hover: invert(51%) sepia(78%) saturate(2081%) hue-rotate(158deg)
         brightness(90%) contrast(101%);
+    --clr--footer: rgb(196, 196, 196);
 
     /* air quality */
     --clr-green: rgb(65, 192, 65);
@@ -25,6 +26,7 @@
     --fs-location: 1.3rem;
     --fs-temp: 2.8rem;
     --fs-error: 2.5rem;
+    --fs-footer: 0.75rem;
 
     /* font-weights */
     --fw-details-values: 300;
@@ -36,6 +38,10 @@ body {
     background-color: var(--clr-bkg);
     color: var(--clr-text);
     font-family: var(--ff-main);
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .weather {
@@ -161,6 +167,32 @@ body {
         text-align: center;
         font-size: var(--fs-error);
     }
+}
+
+/* FOOTER */
+footer {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    font-size: var(--fs-footer);
+    color: var(--clr--footer);
+
+    /* Ty stackoverflow: https://stackoverflow.com/a/69916213/21600888 */
+    margin-top: auto;
+
+    a,
+    &:visited {
+        color: var(--clr-light-green);
+    }
+
+    a:hover {
+        background-color: var(--clr-light-green);
+        color: black;
+        padding: 0.2rem;
+        border-radius: 10px;
+    }
+
+ 
 }
 
 .hidden {
